@@ -25,7 +25,7 @@ huggingface-cli download TMElyralab/MuseTalk \
 
 # Download SD VAE weights
 huggingface-cli download stabilityai/sd-vae-ft-mse \
-  --local-dir $CheckpointsDir/sd-vae \
+  --local-dir $CheckpointsDir/sd-sd-vae-ft-mse \
   --include "config.json" "diffusion_pytorch_model.bin"
 
 # Download Whisper weights

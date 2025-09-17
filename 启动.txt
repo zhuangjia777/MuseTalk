@@ -1,0 +1,24 @@
+启动本项目环境
+```bash
+conda activate ./my_env
+```
+
+注意
+1. 如果没有项目中没有my_env文件夹，先创建独立环境
+```bash
+conda env create -p ./my_env -f environment.yml
+```
+
+2. 如果没有安装conda，从https://repo.anaconda.com/miniconda/ 下载Miniconda3-latest-Windows-x86_64.exe
+
+3. 如果建独立环境失败，清理conda缓存
+```bash
+conda clean --all --yes
+```
+
+4. 如果environment.yml更新，更新my_env环境命令
+```bash
+conda env update --file environment.yml --name my_env
+```
+
+5. 如果本机环境不是win64，要运行build_conda_vs.bat编译出适配的ai_ctp.pyd。

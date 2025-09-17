@@ -244,7 +244,7 @@ Finally, these weights should be organized in `models` as follows:
 ├── face-parse-bisent
 │   ├── 79999_iter.pth
 │   └── resnet18-5c106cde.pth
-├── sd-vae
+├── sd-vae-ft-mse
 │   ├── config.json
 │   └── diffusion_pytorch_model.bin
 └── whisper

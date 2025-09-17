@@ -317,7 +317,7 @@ if __name__ == "__main__":
     parser.add_argument("--version", type=str, default="v15", choices=["v1", "v15"], help="Version of MuseTalk: v1 or v15")
     parser.add_argument("--ffmpeg_path", type=str, default="./ffmpeg-4.4-amd64-static/", help="Path to ffmpeg executable")
     parser.add_argument("--gpu_id", type=int, default=0, help="GPU ID to use")
-    parser.add_argument("--vae_type", type=str, default="sd-vae", help="Type of VAE model")
+    parser.add_argument("--vae_type", type=str, default="sd-vae-ft-mse", help="Type of VAE model")
     parser.add_argument("--unet_config", type=str, default="./models/musetalk/musetalk.json", help="Path to UNet configuration file")
     parser.add_argument("--unet_model_path", type=str, default="./models/musetalk/pytorch_model.bin", help="Path to UNet model weights")
     parser.add_argument("--whisper_dir", type=str, default="./models/whisper", help="Directory containing Whisper model")

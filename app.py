@@ -133,7 +133,7 @@ def download_model():
     required_models = {
         "MuseTalk": f"{CheckpointsDir}/musetalkV15/unet.pth",
         "MuseTalk": f"{CheckpointsDir}/musetalkV15/musetalk.json",
-        "SD VAE": f"{CheckpointsDir}/sd-vae/config.json",
+        "SD VAE": f"{CheckpointsDir}/sd-vae-ft-mse/config.json",
         "Whisper": f"{CheckpointsDir}/whisper/config.json",
         "DWPose": f"{CheckpointsDir}/dwpose/dw-ll_ucoco_384.pth",
         "SyncNet": f"{CheckpointsDir}/syncnet/latentsync_syncnet.pt",
@@ -391,7 +391,7 @@ def inference(audio_path, video_path, bbox_shift, extra_margin=10, parsing_mode=
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 vae, unet, pe = load_all_model(
     unet_model_path="./models/musetalkV15/unet.pth", 
-    vae_type="sd-vae",
+    vae_type="sd-vae-ft-mse",
     unet_config="./models/musetalkV15/musetalk.json",
     device=device
 )
